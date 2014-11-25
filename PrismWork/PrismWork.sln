@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWork", "Tools\PrismWork\PrismWork.csproj", "{8601EB0A-CDD7-4A59-8FF8-66BC07ED2028}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{9C75A5A2-64D2-423C-AA22-F20BBB77EE8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{48643A16-DF0E-49E2-B608-1AF2C6CA3884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLib", "Modules\ControlLib\ControlLib.csproj", "{4A956466-49E3-4B0E-A281-EC57BD176032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonHelper", "Common\CommonHelper\CommonHelper.csproj", "{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +21,20 @@ Global
 		{8601EB0A-CDD7-4A59-8FF8-66BC07ED2028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8601EB0A-CDD7-4A59-8FF8-66BC07ED2028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8601EB0A-CDD7-4A59-8FF8-66BC07ED2028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A956466-49E3-4B0E-A281-EC57BD176032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A956466-49E3-4B0E-A281-EC57BD176032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A956466-49E3-4B0E-A281-EC57BD176032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A956466-49E3-4B0E-A281-EC57BD176032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A956466-49E3-4B0E-A281-EC57BD176032} = {9C75A5A2-64D2-423C-AA22-F20BBB77EE8C}
+		{FD27DE89-D16F-4B28-84B3-E5E2EEAE0636} = {48643A16-DF0E-49E2-B608-1AF2C6CA3884}
 	EndGlobalSection
 EndGlobal
