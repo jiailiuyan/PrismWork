@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -9,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorkCommon.Manager.LayoutMgr;
 
-namespace ControlLib
+namespace PrismWork
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Shell.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    [Export(typeof(IShell))]
+    public partial class Shell : Window, IShell
     {
-        public MainWindow()
+        public Shell()
         {
             InitializeComponent();
+
+            this.Loaded += Shell_Loaded;
+        }
+
+        void Shell_Loaded(object sender, RoutedEventArgs e)
+        {
+            var at = this.contentcontrol;
+            
         }
     }
 }
