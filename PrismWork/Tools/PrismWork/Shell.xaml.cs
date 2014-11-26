@@ -31,7 +31,7 @@ namespace PrismWork
         void Shell_Loaded(object sender, RoutedEventArgs e)
         {
             var at = this.contentcontrol;
-            
+            var d = at.Tag;
         }
     }
 }

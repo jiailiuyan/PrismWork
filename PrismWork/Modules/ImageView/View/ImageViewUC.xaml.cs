@@ -48,10 +48,7 @@ namespace ImageView
         void ImageViewUC_Loaded(object sender, RoutedEventArgs e)
         {
 
-
         }
-
-
 
     }
 }

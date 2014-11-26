@@ -32,7 +32,7 @@ namespace WorkCommon.Behaviors
         public string RegionName { get; set; }
         /// <summary>
         /// 是否需要初始化
-        /// 默认值为true,保证编辑器启动时,初始化给定模块
+        /// 默认值为true,保证启动时,初始化给定模块
         /// </summary>
         public bool IsNeedInitialize { get; set; }
 

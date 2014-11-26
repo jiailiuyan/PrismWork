@@ -8,8 +8,9 @@
         Width="300"
         Height="300">
     <Grid Name="gridMenu" Grid.ColumnSpan="2">
-        <ContentControl x:Name="contentcontrol"
-                        BorderThickness="0,0,0,1"
-                        cal:RegionManager.RegionName="{x:Static manager:RegionNames.ImageView}" />
+        <ItemsControl x:Name="contentcontrol"
+                      BorderThickness="0,0,0,1"
+                      Tag="{x:Static manager:RegionNames.ImageView}"
+                      cal:RegionManager.RegionName="{x:Static manager:RegionNames.ImageView}" />
     </Grid>
 </Window>

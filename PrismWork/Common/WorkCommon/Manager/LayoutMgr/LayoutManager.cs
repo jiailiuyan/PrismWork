@@ -35,6 +35,7 @@ namespace WorkCommon.Manager.LayoutMgr
         public void CombineViewPart()
         {
             InitViewPart();
+            FillDockingManager();
         }
 
         /// <summary>
@@ -54,6 +55,31 @@ namespace WorkCommon.Manager.LayoutMgr
                 }
                 IsCombinedView = true;
             }
+        }
+
+        /// <summary>
+        /// 填充DockingManager,即组装各个组件
+        /// </summary>
+        private void FillDockingManager()
+        {
+            //viewList.Clear();
+            //foreach (var item in this.dockingManager.Layout.Descendents().OfType<LayoutAnchorable>())
+            //{
+            //LayoutAnchorable anchorable = item as LayoutAnchorable;
+            //var view = viewsManager.GetRegionView(anchorable.ContentId);
+            //viewList.Add(anchorable.ContentId, anchorable);
+            //anchorable.Content = view;
+            //}
+        }
+
+        /// <summary>
+        /// 获取对应的视图区域
+        /// </summary>
+        /// <param name="regionName"></param>
+        /// <returns></returns>
+        private object GetViewPart(string regionName)
+        {
+            return viewsManager.GetRegionView(regionName);
         }
 
     }

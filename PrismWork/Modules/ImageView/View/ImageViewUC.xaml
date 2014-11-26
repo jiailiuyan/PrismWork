@@ -6,5 +6,7 @@
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
-    <Grid Background="AliceBlue" />
+    <Grid Width="300"
+          Height="300"
+          Background="AliceBlue" />
 </UserControl>

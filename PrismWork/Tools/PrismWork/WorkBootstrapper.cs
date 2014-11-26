@@ -7,6 +7,7 @@ using System.Windows;
 using ImageView;
 using Microsoft.Practices.Prism.MefExtensions;
 using Microsoft.Practices.ServiceLocation;
+using WorkCommon.Behaviors;
 using WorkCommon.Manager;
 using WorkCommon.Manager.LayoutMgr;
 
@@ -26,6 +27,17 @@ namespace PrismWork
             Application.Current.MainWindow.Show();
         }
 
+        /// <summary>
+        /// 重写区域加载器,获取区域
+        /// </summary>
+        /// <returns></returns>
+        protected override Microsoft.Practices.Prism.Regions.IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
+        {
+            var factory = base.ConfigureDefaultRegionBehaviors();
+            factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
+            return factory;
+        }
+
         /// <summary> 导入使用的插件 </summary>
         protected override void ConfigureAggregateCatalog()
         {
@@ -35,8 +47,6 @@ namespace PrismWork
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(this.GetType().Assembly));
 
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(GlobalManager).Assembly));
-
-            //this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(LayoutManager).Assembly));
 
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ImageViewUC).Assembly));
         }
