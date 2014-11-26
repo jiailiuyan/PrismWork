@@ -32,15 +32,13 @@ namespace WorkCommon.Manager.LayoutMgr
             this.viewsManager = viewsmanager;
         }
 
+        /// <summary> 增加主界面视图 </summary>
         public void CombineViewPart()
         {
             InitViewPart();
-            FillDockingManager();
         }
 
-        /// <summary>
-        /// 初始化导出视图
-        /// </summary>
+        /// <summary> 初始化导出视图，确保视图在导出时已经初始化 </summary>
         private void InitViewPart()
         {
             if (IsCombinedView == false)
@@ -55,21 +53,6 @@ namespace WorkCommon.Manager.LayoutMgr
                 }
                 IsCombinedView = true;
             }
-        }
-
-        /// <summary>
-        /// 填充DockingManager,即组装各个组件
-        /// </summary>
-        private void FillDockingManager()
-        {
-            //viewList.Clear();
-            //foreach (var item in this.dockingManager.Layout.Descendents().OfType<LayoutAnchorable>())
-            //{
-            //LayoutAnchorable anchorable = item as LayoutAnchorable;
-            //var view = viewsManager.GetRegionView(anchorable.ContentId);
-            //viewList.Add(anchorable.ContentId, anchorable);
-            //anchorable.Content = view;
-            //}
         }
 
         /// <summary>
